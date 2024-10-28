@@ -1,13 +1,15 @@
-add_library(PN_test_lib SHARED template.c)
+add_library(mmdm SHARED 
+    sdl_utils.c
+)
 
 target_include_directories(
-    PN_test_lib
+    mmdm
     PUBLIC $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
            $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
     PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 install(
-    TARGETS PN_test_lib
+    TARGETS mmdm
     EXPORT ${PROJECT_NAME}-targets
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}

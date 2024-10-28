@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
-project(PackageName)
+project(mmdm)
 
 include(GNUInstallDirs)
 
@@ -57,5 +57,4 @@ install(
     DIRECTORY include/
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
     FILES_MATCHING
-    PATTERN "*.h"
-    PATTERN "*.hpp")
+    PATTERN "*.h")
