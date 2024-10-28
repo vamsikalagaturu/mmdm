@@ -1,6 +1,4 @@
-add_library(mmdm SHARED 
-    sdl_utils.c
-)
+add_library(mmdm SHARED sdl_utils.c)
 
 target_include_directories(
     mmdm

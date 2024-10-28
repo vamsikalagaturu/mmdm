@@ -1,5 +1,5 @@
-#ifndef PACKAGENAME_TEMPLATE_H
-#define PACKAGENAME_TEMPLATE_H
+#ifndef MMDM_SDL_UTILS_H
+#define MMDM_SDL_UTILS_H
 
 // Function declaration for addition
 int add(int pA, int pB);
@@ -15,4 +15,4 @@ int multiply(int pA, int pB)
     return result;
 }
 
-#endif// PACKAGENAME_TEMPLATE_H
+#endif// MMDM_SDL_UTILS_H
