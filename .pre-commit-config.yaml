@@ -20,9 +20,12 @@ repos:
         files: \.(c|h|cc)$
         args:
           - -p
-          - ../../build/mmdm/ # Replace 'build/' with your actual compilation database path (add set(CMAKE_EXPORT_COMPILE_COMMANDS ON) in CMakeLists.txt)
+          - ../../build/mmdm/
           - -extra-arg=-isystem
-          - -extra-arg=../../install/include # Replace 'install/include' with your actual system include path
+          - -extra-arg=../../install/include
+          - --fix
+          - --fix-errors
+          - --fix-notes
 
       - id: cpp-lint
         name: cpp-lint
@@ -31,9 +34,9 @@ repos:
         files: \.(cpp|hpp)$
         args:
           - -p
-          - ../../build/mmdm/ # Replace 'build/' with your actual compilation database path (add set(CMAKE_EXPORT_COMPILE_COMMANDS ON) in CMakeLists.txt)
+          - ../../build/mmdm/
           - -extra-arg=-isystem
-          - -extra-arg=../../install/include # Replace 'install/include' with your actual system include path
+          - -extra-arg=../../install/include
 
       - id: cmake-format
         name: cmake-format

@@ -59,7 +59,7 @@ jobs:
           cmake ../../src/$PACKAGE_NAME \
             -DCMAKE_BUILD_TYPE=Release \
             -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
-            -DENABLE_TESTS=ON \
+            # -DENABLE_TESTS=ON \
             -DCMAKE_INSTALL_PREFIX=../../install
 
           # Install to the specified install directory

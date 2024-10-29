@@ -1,18 +1,20 @@
 #ifndef MMDM_SDL_UTILS_H
 #define MMDM_SDL_UTILS_H
 
-// Function declaration for addition
-int add(int pA, int pB);
+#include <SDL.h>
+#include <SDL_image.h>
 
-// Function declaration for subtraction
-int subtract(int pA, int pB);
+void init_sdl(SDL_Window **pWindow, SDL_Renderer **pRenderer, int pWidth, int pHeight);
 
-int multiply(int pA, int pB)
-{
-    int result = 0;
-    int run = 0;
-    for (int i = 0; i < pB; i++) { result = add(result, pA); }
-    return result;
-}
+void quit_sdl(SDL_Window *pWindow, SDL_Renderer *pRenderer);
+
+void clear_screen(SDL_Renderer *pRenderer, int pR, int pG, int pB, int pA);
+
+void present_screen(SDL_Renderer *pRenderer);
+
+void load_texture(SDL_Renderer *pRenderer,
+  const char *pFilename,
+  SDL_Texture **pTexture,
+  int *pResult);
 
 #endif// MMDM_SDL_UTILS_H

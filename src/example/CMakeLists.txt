@@ -7,4 +7,5 @@ target_link_libraries(temp_ex mmdm)
 install(
     TARGETS temp_ex
     EXPORT ${PROJECT_NAME}-targets
-    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)

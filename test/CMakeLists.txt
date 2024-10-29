@@ -13,4 +13,5 @@ add_test(NAME main_test COMMAND main.test)
 add_custom_command(
     TARGET main.test
     POST_BUILD
-    COMMAND ctest -C $<CONFIGURATION> --output-on-failure)
+    COMMAND ctest -C $<CONFIGURATION> --output-on-failure
+)
